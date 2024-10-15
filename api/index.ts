@@ -24,5 +24,6 @@ app.post('/api/forward', async (req, res) => {
     }
 });
 
-// Export the app so Vercel can use it as a serverless function
-module.exports = app;
+app.listen(3001, () => console.log('Proxy server running on port 3000'));
+
+export default app;
